@@ -2,8 +2,20 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Vault Pro+ | إدارة الشهادات</title>
+
+    <!-- ============================================================
+         FAVICON - أيقونة الموقع (شريط المتصفح / التبويب)
+         ============================================================ -->
+    <!-- أيقونة SVG مباشرة (مدعومة في معظم المتصفحات الحديثة) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236366f1'/%3E%3Cpath d='M50 20 L70 40 L65 45 L50 30 L35 45 L30 40 L50 20Z' fill='white'/%3E%3Cpath d='M30 50 L50 70 L70 50 L65 55 L50 70 L35 55 L30 50Z' fill='white' opacity='0.8'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M35 50 L45 60 L65 40' stroke='white' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    
+    <!-- أيقونة احتياطية بصيغة PNG (لمتصفحات أقدم) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZAAAAV9JREFUWEftl7FNAzEURZ+NgSgA0RXEAhS0FMAGQInoKAFKwBYpU5CBKAG7qCiAoKCAYAMpKKBD+12RZEm2LNnX/eVKX1iy3s99ObaF/v4Yp/SwtG3bPmXWrqXs/ULfiN3B6H5PScIIH8D7jPhxSOaP7qSdybH2cngYIl7vseCz7/ZBp/udwLrd54QcExsDmGtrHO2uL+7Q58HLcUjsoeT1ceV3yc6Hn4idcbTbxb3h8I3pJ7ErkLwSzm3Kct6L71Pq9p53Jk6vz4cLcaZ5b7y9byzE08U2F/mx4t58ABbFOUzZ3m9yAISvH5mJr7J7CbNDxXUDctcLz/PclBLnR0SUAtL1F/0Q2vYH8CEH+yDy04akug04k4hI2Rc5k5W+pUEegf3C/l0iPz09ISJSd1MnG09hVt2WN1vplu8qB+C3/7TME/zcC9JgfnWBdAk7Y+u8N1QkkL9cv7pA5u1T7wX5rckNcyc7AAAAAElFTkSuQmCC">
+    
+    <!-- أيقونة Apple Touch (iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZAAABGdJREFUeJztnTFu3DAURZ9r0UVU+gIuUrpJlSKlu3SJmMMI2TlIT6qUGdIlykFy1myBIEBiQc6i+PAHj0wkZ/IHZAg9YyVrfU+tV6vVeiH7QjvjSxR6IDnE+cP5w/mz4u//x/0P51v8r1evVzWELs//N0RNoYcVZyXOEZc9gO40hNaQ5XrBjsf/ewCdR9t7+B1el/XuVQ2hi/t8IawVeyh1A9hZJxSvcJ7Qw/ZIuwJN5MkTuA54fH/70BmjphJ6p7vRk8/nM63TtIlf48uy3rvfNbRhHY/1/rHukj3A3p+qvwNE4zR2n3A1Kud1PUotH0JN4zRW/Stg3jNUVyygMxowjTVrtS9pSNRrBE6ohrBmYOdWf8rJEEUdQXU7f8rxWbL2wZzSWY3UvV0HxM7RvC7Hd7Y/Q+wv4uBd1Y/pzxu/AUJ++rtS64TsW2SXxPKTST0o45V6gO0AgDvL/O/aJ9/31Rdv3enL53UyN/vOFosZQO9rv1z8Nh6T9KbZzNYe5NrcY1rPifx++yhF5j55sBYF3P0P72fH+OXmYcdH0hvj4/R8N24nP66rs5vV1uCbrd07sxwgl0vjGfQ9JwG3DQ/L0t1s7YAvXKowtqVr7lDPc/tGcxyTAw3YH9C/utn4hSibvKc3ttk1l+PqavfeQjf3uUKAn/BA9yg/ahAAO58DRFsDlSLE9wLsDgB/APMbaYDSQ/cS7HyrM4PxIYBey/hp6mR2Mx9jEwC9YxMAdl52fo/3XdzZk/s3pibfKPBj/PhuexIH0FmrBgWofbzJkC37Piv1jLDNffuI0+ft9LpZTezGfV8JdC2L7ufFfHtHz7EhcA2m1mCx1lNp64/t2k8Zflr+2U2LfnWj1YCdqtdr0dE0+sU7goY+LL9R68WErYcfYGlH2BE9DvM9t4hsw47J+ri2I+xzrx+g9QNF6/cv6zEA9nwdyS9HjtBSpgP4n31COTxP0ErnB/Q1Tl7o9KqG0KebsPkf7r/DF6ZfY+stBO4wffO/VfXxRz6Azr5NPO4V7s5gSnG/dX9s1X5I6D16tx4g53bL0nM8n07P/H2dHOCNwc/K5Xduf6t/9K3fC2xy48uZ7X5L/R+0SPrj99q8wv04U/3H79PjAH4bAdA5zpkMgUft5hw36L0FgJY6vj2fmW4F9ryd8k97fBf7y/P2Ss8TD0c7u6QCArCi0wHQdcbW+8GSDAZw5k87PH9WPn8iOlc4Lgr6mNUKsB1p//5P4Ceu0z+8WgCujP82ArRjO1m9fgudv4fGtpX6S5PV3imTCZ31PNsF1O8HQM9E50LXd9CFR9AWuz5T6M4BYPc17yr47ZxctQDodKZdHNCKR17d7Q/Qq7LHD+3B5BcA7WeiTwFwKXQBXxdaR3eLEV6b9LyOSs8Rzw0A7c6z7xKtV+VOb2T1H0Pn/gpoOKUx2AHQ8wFwCvPqHXyH7rxTg7v7BvmXkgN/G8XJ3flQ6WPwHbgfXk6lUZKLJYAAAAAASUVORK5CYII=">
 
     <!-- Bootstrap & Icons & iziToast -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +24,7 @@
 
     <style>
         /* ============================================================
-           ROOT VARIABLES (dynamic via JS)
+           ROOT VARIABLES
            ============================================================ */
         :root {
             --primary: #6366f1;
@@ -33,12 +45,8 @@
             --radius: 20px;
             --transition: .25s ease;
             --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            --icon-size: 1rem;
         }
 
-        /* ============================================================
-           THEMES (12 color schemes)
-           ============================================================ */
         [data-theme="dark"] {
             --body-bg: #0b1120;
             --surface: #111827;
@@ -50,81 +58,36 @@
             --shadow-hover: 0 18px 45px rgba(0, 0, 0, .40);
         }
 
-        /* Theme 1: Indigo (default) */
-        [data-color="indigo"] {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-        }
-        /* Theme 2: Rose */
-        [data-color="rose"] {
-            --primary: #f43f5e;
-            --primary-hover: #e11d48;
-        }
-        /* Theme 3: Emerald */
-        [data-color="emerald"] {
-            --primary: #10b981;
-            --primary-hover: #059669;
-        }
-        /* Theme 4: Amber */
-        [data-color="amber"] {
-            --primary: #f59e0b;
-            --primary-hover: #d97706;
-        }
-        /* Theme 5: Sky */
-        [data-color="sky"] {
-            --primary: #0ea5e9;
-            --primary-hover: #0284c7;
-        }
-        /* Theme 6: Violet */
-        [data-color="violet"] {
-            --primary: #8b5cf6;
-            --primary-hover: #7c3aed;
-        }
-        /* Theme 7: Pink */
-        [data-color="pink"] {
-            --primary: #ec4899;
-            --primary-hover: #db2777;
-        }
-        /* Theme 8: Cyan */
-        [data-color="cyan"] {
-            --primary: #06b6d4;
-            --primary-hover: #0891b2;
-        }
-        /* Theme 9: Lime */
-        [data-color="lime"] {
-            --primary: #84cc16;
-            --primary-hover: #65a30d;
-        }
-        /* Theme 10: Orange */
-        [data-color="orange"] {
-            --primary: #f97316;
-            --primary-hover: #ea580c;
-        }
-        /* Theme 11: Teal */
-        [data-color="teal"] {
-            --primary: #14b8a6;
-            --primary-hover: #0d9488;
-        }
-        /* Theme 12: Fuchsia */
-        [data-color="fuchsia"] {
-            --primary: #d946ef;
-            --primary-hover: #c026d3;
-        }
+        /* 12 Color Themes */
+        [data-color="indigo"] { --primary: #6366f1; --primary-hover: #4f46e5; }
+        [data-color="rose"] { --primary: #f43f5e; --primary-hover: #e11d48; }
+        [data-color="emerald"] { --primary: #10b981; --primary-hover: #059669; }
+        [data-color="amber"] { --primary: #f59e0b; --primary-hover: #d97706; }
+        [data-color="sky"] { --primary: #0ea5e9; --primary-hover: #0284c7; }
+        [data-color="violet"] { --primary: #8b5cf6; --primary-hover: #7c3aed; }
+        [data-color="pink"] { --primary: #ec4899; --primary-hover: #db2777; }
+        [data-color="cyan"] { --primary: #06b6d4; --primary-hover: #0891b2; }
+        [data-color="lime"] { --primary: #84cc16; --primary-hover: #65a30d; }
+        [data-color="orange"] { --primary: #f97316; --primary-hover: #ea580c; }
+        [data-color="teal"] { --primary: #14b8a6; --primary-hover: #0d9488; }
+        [data-color="fuchsia"] { --primary: #d946ef; --primary-hover: #c026d3; }
 
         /* ============================================================
-           RESET & BASE
+           GLOBAL RESET & BASE
            ============================================================ */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
             margin: 0;
+            min-height: 100vh;
             background: radial-gradient(circle at top right, rgba(99, 102, 241, .05), transparent 40%), var(--body-bg);
             color: var(--text);
             font-family: var(--font-family);
             transition: background var(--transition), color var(--transition);
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* ============================================================
@@ -136,45 +99,51 @@
             backdrop-filter: blur(18px);
             border-bottom: 1px solid var(--border);
             transition: background var(--transition);
+            width: 100%;
         }
         [data-theme="dark"] .app-navbar { background: rgba(15,23,42,.88); }
 
         .brand {
             display: flex; align-items: center; gap: 10px;
-            text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;
+            text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.1rem;
+            white-space: nowrap;
         }
         .brand-icon {
-            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-            border-radius: 14px; background: linear-gradient(135deg, var(--primary), #8b5cf6);
-            color: white; font-size: 1.2rem; box-shadow: 0 8px 20px rgba(99,102,241,.25);
+            width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+            border-radius: 12px; background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            color: white; font-size: 1.1rem; box-shadow: 0 8px 20px rgba(99,102,241,.25);
             transition: background var(--transition);
+            flex-shrink: 0;
         }
         .navbar-action {
-            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-            border-radius: 12px !important; font-size: 1rem;
+            width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+            border-radius: 10px !important; font-size: .95rem;
+            flex-shrink: 0;
         }
         .lang-toggle {
             border-radius: 30px !important;
-            padding: 6px 14px;
+            padding: 5px 12px;
             font-weight: 600;
-            font-size: .8rem;
+            font-size: .75rem;
             border: 1px solid var(--border);
             background: var(--surface-2);
             color: var(--text);
             transition: all .2s;
+            white-space: nowrap;
         }
         .lang-toggle:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
 
         /* ============================================================
-           TOOLBAR - تحسين كبير
+           TOOLBAR ENHANCED
            ============================================================ */
         .toolbar-enhanced {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 16px 20px;
+            padding: 14px 16px;
             box-shadow: var(--shadow);
             transition: all var(--transition);
+            width: 100%;
         }
         .toolbar-enhanced .search-wrapper {
             position: relative;
@@ -185,24 +154,27 @@
             border: 1px solid var(--border);
             transition: border-color .2s;
             padding: 0 4px;
+            width: 100%;
         }
         .toolbar-enhanced .search-wrapper:focus-within {
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(99,102,241,.12);
         }
         .toolbar-enhanced .search-wrapper .search-icon {
-            padding: 0 12px;
+            padding: 0 10px;
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
         .toolbar-enhanced .search-wrapper input {
             border: none;
             background: transparent;
-            padding: 10px 8px 10px 0;
+            padding: 9px 6px 9px 0;
             width: 100%;
             color: var(--text);
-            font-size: .95rem;
+            font-size: .9rem;
             outline: none;
+            min-width: 0;
         }
         .toolbar-enhanced .search-wrapper input::placeholder {
             color: var(--text-secondary);
@@ -212,21 +184,24 @@
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
+            width: 100%;
         }
         .toolbar-enhanced .filter-group .form-select {
             background: var(--surface-2);
             border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 8px 32px 8px 14px;
+            padding: 7px 30px 7px 12px;
             color: var(--text);
-            font-size: .85rem;
-            min-width: 120px;
+            font-size: .82rem;
+            min-width: 100px;
+            flex: 1 1 auto;
             cursor: pointer;
             transition: all .2s;
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: left 12px center;
+            background-position: left 10px center;
+            background-size: 10px;
         }
         .toolbar-enhanced .filter-group .form-select:focus {
             border-color: var(--primary);
@@ -236,136 +211,145 @@
             background: var(--surface-2);
             border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 8px 18px;
+            padding: 7px 16px;
             color: var(--text);
             font-weight: 600;
-            font-size: .85rem;
+            font-size: .82rem;
             transition: all .2s;
             white-space: nowrap;
+            width: 100%;
         }
         .toolbar-enhanced .btn-backup:hover {
             background: var(--primary);
             color: #fff;
             border-color: var(--primary);
         }
-        .toolbar-enhanced .btn-backup i {
-            margin-left: 6px;
-        }
+        .toolbar-enhanced .btn-backup i { margin-left: 5px; }
 
         /* ============================================================
-           HERO & OTHERS (unchanged but improved)
+           HERO
            ============================================================ */
-        .hero { padding: 40px 0 20px; }
+        .hero { padding: 30px 0 16px; }
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 7px;
-            padding: 6px 14px; border-radius: 999px;
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 5px 12px; border-radius: 999px;
             background: rgba(99,102,241,.10); color: var(--primary);
-            font-size: .8rem; font-weight: 700; margin-bottom: 12px;
+            font-size: .75rem; font-weight: 700; margin-bottom: 10px;
         }
         .hero-title {
-            font-size: clamp(1.8rem, 4.5vw, 3.2rem);
-            font-weight: 900; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 12px;
+            font-size: clamp(1.5rem, 4vw, 2.8rem);
+            font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px;
         }
         .hero-title span { background: linear-gradient(135deg, var(--primary), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-description { max-width: 650px; color: var(--text-secondary); font-size: 1rem; line-height: 1.7; }
+        .hero-description {
+            max-width: 650px; color: var(--text-secondary); font-size: .95rem; line-height: 1.6;
+        }
 
         .btn-primary-custom {
             border: none; background: linear-gradient(135deg, var(--primary), #7c3aed);
-            color: white; border-radius: 13px; padding: 10px 20px;
-            font-weight: 700; box-shadow: 0 8px 20px rgba(99,102,241,.20);
+            color: white; border-radius: 12px; padding: 9px 18px;
+            font-weight: 700; font-size: .9rem;
+            box-shadow: 0 8px 20px rgba(99,102,241,.20);
             transition: transform var(--transition), box-shadow var(--transition);
         }
         .btn-primary-custom:hover { color: white; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(99,102,241,.30); }
 
-        /* stats */
+        /* ============================================================
+           STATS
+           ============================================================ */
         .stat-card {
             background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-            padding: 18px 20px; box-shadow: var(--shadow); height: 100%;
+            padding: 14px 16px; box-shadow: var(--shadow); height: 100%;
             transition: transform var(--transition), box-shadow var(--transition);
         }
-        .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+        .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
         .stat-icon {
-            width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
-            border-radius: 14px; background: rgba(99,102,241,.10); color: var(--primary); font-size: 1.2rem;
-            transition: background var(--transition), color var(--transition);
+            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+            border-radius: 12px; background: rgba(99,102,241,.10); color: var(--primary); font-size: 1.1rem;
+            flex-shrink: 0;
         }
-        .stat-number { font-size: 1.6rem; font-weight: 900; line-height: 1.2; }
-        .stat-label { color: var(--text-secondary); font-size: .8rem; }
+        .stat-number { font-size: 1.4rem; font-weight: 900; line-height: 1.2; }
+        .stat-label { color: var(--text-secondary); font-size: .75rem; }
 
-        /* upload */
+        /* ============================================================
+           UPLOAD ZONE
+           ============================================================ */
         .upload-zone {
             background: var(--surface); border: 2px dashed var(--border); border-radius: var(--radius);
-            padding: 35px 20px; text-align: center; cursor: pointer;
+            padding: 28px 16px; text-align: center; cursor: pointer;
             transition: border-color var(--transition), background var(--transition), transform var(--transition);
         }
         .upload-zone:hover, .upload-zone.dragover { border-color: var(--primary); background: rgba(99,102,241,.04); transform: translateY(-2px); }
         .upload-icon {
-            width: 65px; height: 65px; margin: 0 auto 14px;
+            width: 56px; height: 56px; margin: 0 auto 10px;
             display: flex; align-items: center; justify-content: center;
-            border-radius: 20px; background: rgba(99,102,241,.10); color: var(--primary); font-size: 2rem;
-            transition: background var(--transition), color var(--transition);
+            border-radius: 18px; background: rgba(99,102,241,.10); color: var(--primary); font-size: 1.8rem;
         }
-        .upload-title { font-size: 1.05rem; font-weight: 800; }
-        .upload-description { color: var(--text-secondary); font-size: .85rem; }
+        .upload-title { font-size: 1rem; font-weight: 800; }
+        .upload-description { color: var(--text-secondary); font-size: .8rem; }
 
-        /* cards */
+        /* ============================================================
+           CERTIFICATE CARDS
+           ============================================================ */
         .certificate-card {
             background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
             overflow: hidden; box-shadow: var(--shadow); height: 100%;
             transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
         }
-        .certificate-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: rgba(99,102,241,.30); }
+        .certificate-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(99,102,241,.30); }
         .certificate-preview {
-            position: relative; height: 200px; overflow: hidden;
+            position: relative; height: 180px; overflow: hidden;
             display: flex; align-items: center; justify-content: center;
             background: linear-gradient(135deg, #eef2ff, #f8fafc);
         }
         [data-theme="dark"] .certificate-preview { background: linear-gradient(135deg, #1e293b, #111827); }
-        .certificate-preview img { width: 100%; height: 100%; object-fit: contain; padding: 6px; transition: transform .4s; }
+        .certificate-preview img { width: 100%; height: 100%; object-fit: contain; padding: 4px; transition: transform .4s; }
         .certificate-card:hover .certificate-preview img { transform: scale(1.02); }
         .pdf-preview { width: 100%; height: 100%; border: none; background: white; }
         .file-type-badge {
-            position: absolute; top: 10px; right: 10px;
+            position: absolute; top: 8px; right: 8px;
             display: inline-flex; align-items: center; gap: 4px;
-            padding: 4px 10px; border-radius: 999px;
+            padding: 3px 8px; border-radius: 999px;
             background: rgba(15,23,42,.78); color: white;
-            font-size: .65rem; font-weight: 700; backdrop-filter: blur(6px);
+            font-size: .6rem; font-weight: 700; backdrop-filter: blur(6px);
         }
-        .certificate-body { padding: 14px 16px; }
-        .certificate-title { font-weight: 800; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
-        .certificate-description { color: var(--text-secondary); font-size: .78rem; min-height: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .certificate-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+        .certificate-body { padding: 12px 14px; }
+        .certificate-title { font-weight: 800; font-size: .9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .certificate-description { color: var(--text-secondary); font-size: .75rem; min-height: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .certificate-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
         .meta-chip {
-            display: inline-flex; align-items: center; gap: 4px;
-            padding: 3px 8px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 3px;
+            padding: 2px 7px; border-radius: 5px;
             background: var(--surface-2); color: var(--text-secondary);
-            font-size: .65rem;
+            font-size: .6rem;
         }
-        .certificate-actions { display: flex; gap: 5px; margin-top: 12px; flex-wrap: wrap; }
-        .certificate-actions .btn { border-radius: 8px; font-size: .75rem; padding: 4px 10px; }
+        .certificate-actions { display: flex; gap: 4px; margin-top: 10px; flex-wrap: wrap; }
+        .certificate-actions .btn { border-radius: 7px; font-size: .7rem; padding: 3px 8px; }
         .note-text {
-            font-size: .72rem; color: var(--text-secondary);
-            background: var(--surface-2); padding: 4px 10px; border-radius: 6px;
+            font-size: .68rem; color: var(--text-secondary);
+            background: var(--surface-2); padding: 3px 8px; border-radius: 5px;
             margin-top: 4px; border-right: 2px solid var(--primary);
             width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
-        .empty-state { text-align: center; padding: 70px 20px; color: var(--text-secondary); }
-        .empty-icon { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: auto; border-radius: 22px; background: rgba(99,102,241,.08); color: var(--primary); font-size: 2.8rem; }
+        .empty-state { text-align: center; padding: 50px 16px; color: var(--text-secondary); }
+        .empty-icon { width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; margin: auto; border-radius: 20px; background: rgba(99,102,241,.08); color: var(--primary); font-size: 2.4rem; }
 
-        /* modals */
-        .modal-content { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+        /* ============================================================
+           MODALS
+           ============================================================ */
+        .modal-content { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
         .modal-header, .modal-footer { border-color: var(--border); }
-        .preview-container { min-height: 60vh; background: #0b1120; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; }
-        .preview-container img { max-width: 100%; max-height: 70vh; object-fit: contain; }
-        .preview-container iframe { width: 100%; height: 70vh; border: none; }
+        .preview-container { min-height: 50vh; background: #0b1120; display: flex; align-items: center; justify-content: center; border-radius: 10px; overflow: hidden; }
+        .preview-container img { max-width: 100%; max-height: 60vh; object-fit: contain; }
+        .preview-container iframe { width: 100%; height: 60vh; border: none; }
         .quick-action {
             display: flex; align-items: center; gap: 10px; width: 100%;
-            padding: 12px; border: 1px solid var(--border); border-radius: 12px;
+            padding: 10px 14px; border: 1px solid var(--border); border-radius: 11px;
             background: var(--surface); color: var(--text);
             transition: background var(--transition), transform var(--transition);
         }
         .quick-action:hover { background: var(--surface-2); transform: translateX(-3px); }
-        .quick-action i { color: var(--primary); font-size: 1rem; }
+        .quick-action i { color: var(--primary); font-size: .95rem; }
 
         /* ============================================================
            FOOTER
@@ -374,28 +358,29 @@
             margin-top: auto;
             background: var(--surface);
             border-top: 1px solid var(--border);
-            padding: 20px 0;
+            padding: 16px 0;
+            width: 100%;
         }
         .footer-clean .footer-brand {
-            display: flex; align-items: center; gap: 8px;
+            display: flex; align-items: center; gap: 6px;
             font-weight: 700; color: var(--text); text-decoration: none;
+            font-size: .9rem;
         }
         .footer-clean .footer-brand .brand-icon-sm {
-            width: 32px; height: 32px;
+            width: 28px; height: 28px;
             display: flex; align-items: center; justify-content: center;
-            border-radius: 10px; background: linear-gradient(135deg, var(--primary), #8b5cf6);
-            color: white; font-size: .9rem;
+            border-radius: 8px; background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            color: white; font-size: .8rem;
+            flex-shrink: 0;
         }
 
         /* ============================================================
-           FLOATING SCROLL-TOP BUTTON (ظهر فقط عند التمرير)
+           FLOATING SCROLL-TOP
            ============================================================ */
         .scroll-top-float {
             position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 48px;
-            height: 48px;
+            bottom: 20px; left: 20px;
+            width: 44px; height: 44px;
             border-radius: 50%;
             background: var(--primary);
             color: #fff;
@@ -404,7 +389,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: all .3s ease;
             z-index: 1060;
@@ -422,43 +407,23 @@
             box-shadow: 0 12px 35px rgba(99,102,241,.45);
             background: var(--primary-hover);
         }
-        .scroll-top-float i {
-            font-size: 1.4rem;
-        }
+        .scroll-top-float i { font-size: 1.2rem; }
 
         /* ============================================================
-           COLOR THEME SELECTOR (dropdown in navbar)
+           COLOR PICKER
            ============================================================ */
-        .color-picker-btn {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 2px solid var(--border);
-            cursor: pointer;
-            transition: all .2s;
-            padding: 0;
-            flex-shrink: 0;
-        }
-        .color-picker-btn:hover {
-            transform: scale(1.1);
-            border-color: var(--primary);
-        }
-        .color-picker-btn.active {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(99,102,241,.3);
-        }
         .color-dropdown-menu {
-            min-width: 220px;
-            padding: 12px;
+            min-width: 200px;
+            padding: 10px;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 14px;
             box-shadow: var(--shadow-hover);
         }
         .color-dropdown-menu .color-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 8px;
+            gap: 6px;
         }
         .color-dropdown-menu .color-grid .color-swatch {
             width: 100%;
@@ -469,7 +434,7 @@
             transition: all .2s;
         }
         .color-dropdown-menu .color-grid .color-swatch:hover {
-            transform: scale(1.15);
+            transform: scale(1.12);
             border-color: var(--text);
         }
         .color-dropdown-menu .color-grid .color-swatch.active {
@@ -477,15 +442,75 @@
             box-shadow: 0 0 0 2px var(--primary);
         }
 
-        /* responsive */
-        @media (max-width: 768px) {
-            .toolbar-enhanced .filter-group { width: 100%; }
-            .toolbar-enhanced .filter-group .form-select { flex: 1; min-width: 100px; }
-            .scroll-top-float { bottom: 20px; left: 20px; width: 42px; height: 42px; font-size: 1.1rem; }
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 575.98px) {
+            .hero-title { font-size: 1.5rem; }
+            .certificate-preview { height: 150px; }
+            .stat-number { font-size: 1.2rem; }
+            .stat-card { padding: 12px; }
+            .stat-icon { width: 34px; height: 34px; font-size: .95rem; }
+            .toolbar-enhanced { padding: 10px 12px; }
+            .toolbar-enhanced .filter-group .form-select { font-size: .75rem; padding: 6px 26px 6px 10px; min-width: 70px; }
+            .toolbar-enhanced .btn-backup { font-size: .75rem; padding: 6px 12px; }
+            .brand { font-size: 1rem; }
+            .brand-icon { width: 32px; height: 32px; font-size: .95rem; }
+            .navbar-action { width: 34px; height: 34px; font-size: .85rem; }
+            .lang-toggle { font-size: .7rem; padding: 4px 10px; }
+            .upload-icon { width: 48px; height: 48px; font-size: 1.5rem; }
+            .upload-title { font-size: .9rem; }
+            .scroll-top-float { width: 38px; height: 38px; font-size: 1rem; bottom: 15px; left: 15px; }
+            .color-dropdown-menu { min-width: 170px; padding: 8px; }
+            .color-dropdown-menu .color-grid { gap: 5px; }
         }
-        @media (max-width: 576px) {
+        @media (min-width: 576px) and (max-width: 767.98px) {
             .hero-title { font-size: 1.8rem; }
             .certificate-preview { height: 170px; }
+            .stat-number { font-size: 1.3rem; }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .hero-title { font-size: 2.2rem; }
+            .certificate-preview { height: 190px; }
+        }
+        @media (min-width: 992px) {
+            .hero-title { font-size: 2.8rem; }
+            .certificate-preview { height: 210px; }
+        }
+        @media (min-width: 1200px) {
+            .container { max-width: 1200px; }
+            .certificate-preview { height: 230px; }
+        }
+        @media (min-width: 1600px) {
+            .container { max-width: 1400px; }
+            .certificate-preview { height: 260px; }
+            .hero-title { font-size: 3.2rem; }
+        }
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero { padding: 15px 0 10px; }
+            .hero-title { font-size: 1.4rem; }
+            .certificate-preview { height: 120px; }
+            .stat-card { padding: 8px 12px; }
+            .stat-number { font-size: 1rem; }
+            .stat-icon { width: 28px; height: 28px; font-size: .8rem; }
+            .upload-zone { padding: 16px; }
+            .upload-icon { width: 36px; height: 36px; font-size: 1.2rem; }
+        }
+        .container, .container-fluid {
+            padding-left: max(12px, env(safe-area-inset-left));
+            padding-right: max(12px, env(safe-area-inset-right));
+            width: 100%;
+        }
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .row > * {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        @media (min-width: 2000px) {
+            .container { max-width: 1600px; }
         }
     </style>
 </head>
@@ -501,8 +526,8 @@
                 <span class="brand-icon"><i class="bi bi-patch-check-fill"></i></span>
                 <span>Vault Pro+</span>
             </a>
-            <div class="d-flex gap-2 align-items-center">
-                <!-- Color Picker Dropdown -->
+            <div class="d-flex gap-2 align-items-center flex-wrap">
+                <!-- Color Picker -->
                 <div class="dropdown">
                     <button class="btn btn-outline-secondary navbar-action" data-bs-toggle="dropdown" title="تغيير اللون">
                         <i class="bi bi-palette"></i>
@@ -527,15 +552,15 @@
                     </ul>
                 </div>
 
-                <!-- Language Toggle -->
+                <!-- Language -->
                 <button class="lang-toggle" id="langToggle"><i class="bi bi-globe2 me-1"></i> <span id="langLabel">AR</span></button>
 
-                <!-- Theme Dark/Light -->
+                <!-- Theme -->
                 <button type="button" class="btn btn-outline-secondary navbar-action" id="themeButton">
                     <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
                 </button>
 
-                <!-- More dropdown -->
+                <!-- More -->
                 <div class="dropdown">
                     <button class="btn btn-outline-secondary navbar-action" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
@@ -566,11 +591,11 @@
 
     <!-- Stats -->
     <section class="mb-3">
-        <div class="row g-3">
-            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-3 align-items-center"><div class="stat-icon"><i class="bi bi-collection"></i></div><div><div class="stat-number" id="totalCount">0</div><div class="stat-label" id="statTotalLabel">إجمالي الملفات</div></div></div></div></div>
-            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-3 align-items-center"><div class="stat-icon"><i class="bi bi-images"></i></div><div><div class="stat-number" id="imageCount">0</div><div class="stat-label" id="statImageLabel">الصور</div></div></div></div></div>
-            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-3 align-items-center"><div class="stat-icon"><i class="bi bi-filetype-pdf"></i></div><div><div class="stat-number" id="pdfCount">0</div><div class="stat-label" id="statPdfLabel">PDF</div></div></div></div></div>
-            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-3 align-items-center"><div class="stat-icon"><i class="bi bi-device-hdd"></i></div><div><div class="stat-number" id="storageSize">0 KB</div><div class="stat-label" id="statStorageLabel">حجم التخزين</div></div></div></div></div>
+        <div class="row g-2 g-sm-3">
+            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-2 gap-sm-3 align-items-center"><div class="stat-icon"><i class="bi bi-collection"></i></div><div><div class="stat-number" id="totalCount">0</div><div class="stat-label" id="statTotalLabel">إجمالي الملفات</div></div></div></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-2 gap-sm-3 align-items-center"><div class="stat-icon"><i class="bi bi-images"></i></div><div><div class="stat-number" id="imageCount">0</div><div class="stat-label" id="statImageLabel">الصور</div></div></div></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-2 gap-sm-3 align-items-center"><div class="stat-icon"><i class="bi bi-filetype-pdf"></i></div><div><div class="stat-number" id="pdfCount">0</div><div class="stat-label" id="statPdfLabel">PDF</div></div></div></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-card"><div class="d-flex gap-2 gap-sm-3 align-items-center"><div class="stat-icon"><i class="bi bi-device-hdd"></i></div><div><div class="stat-number" id="storageSize">0 KB</div><div class="stat-label" id="statStorageLabel">حجم التخزين</div></div></div></div></div>
         </div>
     </section>
 
@@ -585,17 +610,15 @@
         </div>
     </section>
 
-    <!-- TOOLBAR ENHANCED -->
+    <!-- TOOLBAR -->
     <section class="toolbar-enhanced mb-3">
         <div class="row g-2 align-items-center">
-            <!-- Search -->
             <div class="col-lg-5">
                 <div class="search-wrapper">
                     <span class="search-icon"><i class="bi bi-search"></i></span>
                     <input type="search" id="searchInput" placeholder="ابحث عن شهادة...">
                 </div>
             </div>
-            <!-- Filters -->
             <div class="col-sm-6 col-lg-4">
                 <div class="filter-group">
                     <select class="form-select" id="typeFilter">
@@ -611,8 +634,7 @@
                     </select>
                 </div>
             </div>
-            <!-- Backup -->
-            <div class="col-lg-3 text-lg-end">
+            <div class="col-lg-3">
                 <button class="btn-backup" id="backupButton"><i class="bi bi-cloud-arrow-down"></i> Backup / Restore</button>
             </div>
         </div>
@@ -620,7 +642,7 @@
 
     <!-- Grid -->
     <section>
-        <div class="row g-4" id="certificatesGrid"></div>
+        <div class="row g-3 g-sm-4" id="certificatesGrid"></div>
         <div class="empty-state" id="emptyState">
             <div class="empty-icon"><i class="bi bi-folder2-open"></i></div>
             <h3 class="mt-3 fw-bold" id="emptyTitle">لا توجد شهادات بعد</h3>
@@ -648,7 +670,7 @@
 </footer>
 
 <!-- ============================================================
-     FLOATING SCROLL-TOP BUTTON
+     FLOATING SCROLL-TOP
      ============================================================ -->
 <button class="scroll-top-float" id="scrollTopFloat" aria-label="إلى الأعلى">
     <i class="bi bi-arrow-up"></i>
@@ -669,10 +691,10 @@
         <div class="mb-3"><label class="form-label fw-semibold" id="editDescLabel">الوصف</label><textarea class="form-control" id="editDescription" rows="2" placeholder="وصف مختصر..."></textarea></div>
         <div class="mb-3"><label class="form-label fw-semibold" id="editNoteLabel"><i class="bi bi-sticky"></i> ملاحظات (اختياري)</label><textarea class="form-control" id="editNote" rows="3" placeholder="أضف ملاحظاتك حول هذه الشهادة..."></textarea></div>
         <div class="extra-fields">
-            <div class="detail-row"><i class="bi bi-calendar-event"></i> <span id="editCreatedAt">-</span></div>
-            <div class="detail-row"><i class="bi bi-clock"></i> <span id="editCreatedTime">-</span></div>
-            <div class="detail-row"><i class="bi bi-hdd-stack"></i> <span id="editFileSize">-</span></div>
-            <div class="detail-row"><i class="bi bi-file-earmark"></i> <span id="editFileType">-</span></div>
+            <div class="detail-row d-flex flex-wrap gap-2"><i class="bi bi-calendar-event"></i> <span id="editCreatedAt">-</span></div>
+            <div class="detail-row d-flex flex-wrap gap-2"><i class="bi bi-clock"></i> <span id="editCreatedTime">-</span></div>
+            <div class="detail-row d-flex flex-wrap gap-2"><i class="bi bi-hdd-stack"></i> <span id="editFileSize">-</span></div>
+            <div class="detail-row d-flex flex-wrap gap-2"><i class="bi bi-file-earmark"></i> <span id="editFileType">-</span></div>
         </div>
     </div>
     <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal" id="editCancelBtn">إلغاء</button><button class="btn btn-primary-custom" id="saveEditButton"><i class="bi bi-check2-circle me-1"></i><span id="editSaveBtnText">حفظ التعديلات</span></button></div>
@@ -726,7 +748,7 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const backupModal = new bootstrap.Modal(document.getElementById("backupModal"));
 
 // ================================================================
-// SCROLL-TOP FLOATING BUTTON - يظهر فقط عند التمرير
+// SCROLL-TOP
 // ================================================================
 let scrollTopVisible = false;
 window.addEventListener('scroll', () => {
@@ -739,13 +761,12 @@ window.addEventListener('scroll', () => {
         scrollTopVisible = false;
     }
 });
-
 scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // ================================================================
-// COLOR THEME (12 colors)
+// COLOR THEME
 // ================================================================
 function loadColor() {
     const color = localStorage.getItem(COLOR_KEY) || 'indigo';
@@ -754,7 +775,6 @@ function loadColor() {
 function setColor(color) {
     document.documentElement.setAttribute('data-color', color);
     localStorage.setItem(COLOR_KEY, color);
-    // update active swatch
     document.querySelectorAll('.color-swatch').forEach(el => {
         el.classList.toggle('active', el.dataset.color === color);
     });
@@ -762,7 +782,6 @@ function setColor(color) {
 document.querySelectorAll('.color-swatch').forEach(el => {
     el.addEventListener('click', () => {
         setColor(el.dataset.color);
-        // close dropdown
         const dd = bootstrap.Dropdown.getInstance(el.closest('.dropdown')?.querySelector('[data-bs-toggle="dropdown"]'));
         if (dd) dd.hide();
     });
@@ -807,38 +826,46 @@ function applyLang() {
     document.documentElement.dir = isAr ? 'rtl' : 'ltr';
     document.getElementById('langLabel').textContent = isAr ? 'AR' : 'EN';
 
-    // texts
-    document.getElementById('heroBadgeText').textContent = isAr ? 'Local Manager + ملاحظات' : 'Local Manager + Notes';
-    document.getElementById('heroTitleHighlight').textContent = isAr ? 'كل شهاداتك' : 'All your';
-    document.getElementById('heroTitleRest').textContent = isAr ? 'في مكان واحد' : 'certificates in one place';
-    document.getElementById('heroDesc').textContent = isAr ? 'ارفعه، أضف ملاحظات، تاريخ، وقت، حجم، ونوع. كل شيء يحفظ محلياً.' : 'Upload, add notes, date, time, size, type. All stored locally.';
-    document.getElementById('heroUploadText').textContent = isAr ? 'إضافة شهادة' : 'Add Certificate';
-    document.getElementById('uploadTitle').textContent = isAr ? 'اسحب ملفات الشهادات هنا' : 'Drag certificates here';
-    document.getElementById('uploadDesc').textContent = isAr ? 'أو اضغط لاختيار ملفات • PNG • JPG • WEBP • PDF' : 'Or click to select files • PNG • JPG • WEBP • PDF';
-    document.getElementById('attachText').textContent = isAr ? 'إرفاق ملفات' : 'Attach Files';
-    searchInput.placeholder = isAr ? 'ابحث عن شهادة...' : 'Search certificate...';
-    document.getElementById('statTotalLabel').textContent = isAr ? 'إجمالي الملفات' : 'Total Files';
-    document.getElementById('statImageLabel').textContent = isAr ? 'الصور' : 'Images';
-    document.getElementById('statPdfLabel').textContent = isAr ? 'PDF' : 'PDF';
-    document.getElementById('statStorageLabel').textContent = isAr ? 'حجم التخزين' : 'Storage Size';
-    document.getElementById('emptyTitle').textContent = isAr ? 'لا توجد شهادات بعد' : 'No certificates yet';
-    document.getElementById('emptyDesc').textContent = isAr ? 'ارفع أول شهادة لك للبدء.' : 'Upload your first certificate to start.';
-    document.getElementById('emptyAddText').textContent = isAr ? 'إضافة شهادة' : 'Add Certificate';
-    document.getElementById('footerCopy').textContent = isAr ? '© 2026 - 2027. جميع الحقوق محفوظة.' : '© 2026 - 2027. All rights reserved.';
-    document.getElementById('editTitleText').textContent = isAr ? 'تعديل الشهادة' : 'Edit Certificate';
-    document.getElementById('editNameLabel').textContent = isAr ? 'اسم الشهادة' : 'Certificate Name';
-    document.getElementById('editDescLabel').textContent = isAr ? 'الوصف' : 'Description';
+    const texts = {
+        heroBadgeText: isAr ? 'Local Manager + ملاحظات' : 'Local Manager + Notes',
+        heroTitleHighlight: isAr ? 'كل شهاداتك' : 'All your',
+        heroTitleRest: isAr ? 'في مكان واحد' : 'certificates in one place',
+        heroDesc: isAr ? 'ارفعه، أضف ملاحظات، تاريخ، وقت، حجم، ونوع. كل شيء يحفظ محلياً.' : 'Upload, add notes, date, time, size, type. All stored locally.',
+        heroUploadText: isAr ? 'إضافة شهادة' : 'Add Certificate',
+        uploadTitle: isAr ? 'اسحب ملفات الشهادات هنا' : 'Drag certificates here',
+        uploadDesc: isAr ? 'أو اضغط لاختيار ملفات • PNG • JPG • WEBP • PDF' : 'Or click to select files • PNG • JPG • WEBP • PDF',
+        attachText: isAr ? 'إرفاق ملفات' : 'Attach Files',
+        searchPlaceholder: isAr ? 'ابحث عن شهادة...' : 'Search certificate...',
+        statTotalLabel: isAr ? 'إجمالي الملفات' : 'Total Files',
+        statImageLabel: isAr ? 'الصور' : 'Images',
+        statPdfLabel: isAr ? 'PDF' : 'PDF',
+        statStorageLabel: isAr ? 'حجم التخزين' : 'Storage Size',
+        emptyTitle: isAr ? 'لا توجد شهادات بعد' : 'No certificates yet',
+        emptyDesc: isAr ? 'ارفع أول شهادة لك للبدء.' : 'Upload your first certificate to start.',
+        emptyAddText: isAr ? 'إضافة شهادة' : 'Add Certificate',
+        footerCopy: isAr ? '© 2026 - 2027. جميع الحقوق محفوظة.' : '© 2026 - 2027. All rights reserved.',
+        editTitleText: isAr ? 'تعديل الشهادة' : 'Edit Certificate',
+        editNameLabel: isAr ? 'اسم الشهادة' : 'Certificate Name',
+        editDescLabel: isAr ? 'الوصف' : 'Description',
+        editNoteLabel: isAr ? 'ملاحظات (اختياري)' : 'Notes (optional)',
+        editCancelBtn: isAr ? 'إلغاء' : 'Cancel',
+        editSaveBtnText: isAr ? 'حفظ التعديلات' : 'Save Changes',
+        deleteTitle: isAr ? 'حذف الشهادة' : 'Delete Certificate',
+        deleteConfirmText: isAr ? 'هل تريد حذف هذه الشهادة؟' : 'Do you want to delete this certificate?',
+        deleteCancelBtn: isAr ? 'إلغاء' : 'Cancel',
+        deleteConfirmBtn: isAr ? 'حذف نهائي' : 'Delete Permanently',
+        backupTitle: isAr ? 'Backup & Restore' : 'Backup & Restore',
+        backupDesc: isAr ? 'احفظ نسخة احتياطية أو استعدها.' : 'Save or restore a backup.',
+        backupExportText: isAr ? 'تصدير Backup' : 'Export Backup',
+        backupImportText: isAr ? 'استيراد Backup' : 'Import Backup'
+    };
+
+    Object.keys(texts).forEach(key => {
+        const el = document.getElementById(key);
+        if (el) el.textContent = texts[key];
+    });
+
     document.getElementById('editNoteLabel').innerHTML = `<i class="bi bi-sticky"></i> ${isAr ? 'ملاحظات (اختياري)' : 'Notes (optional)'}`;
-    document.getElementById('editCancelBtn').textContent = isAr ? 'إلغاء' : 'Cancel';
-    document.getElementById('editSaveBtnText').textContent = isAr ? 'حفظ التعديلات' : 'Save Changes';
-    document.getElementById('deleteTitle').textContent = isAr ? 'حذف الشهادة' : 'Delete Certificate';
-    document.getElementById('deleteConfirmText').textContent = isAr ? 'هل تريد حذف هذه الشهادة؟' : 'Do you want to delete this certificate?';
-    document.getElementById('deleteCancelBtn').textContent = isAr ? 'إلغاء' : 'Cancel';
-    document.getElementById('deleteConfirmBtn').textContent = isAr ? 'حذف نهائي' : 'Delete Permanently';
-    document.getElementById('backupTitle').textContent = isAr ? 'Backup & Restore' : 'Backup & Restore';
-    document.getElementById('backupDesc').textContent = isAr ? 'احفظ نسخة احتياطية أو استعدها.' : 'Save or restore a backup.';
-    document.getElementById('backupExportText').textContent = isAr ? 'تصدير Backup' : 'Export Backup';
-    document.getElementById('backupImportText').textContent = isAr ? 'استيراد Backup' : 'Import Backup';
 
     typeFilter.options[0].text = isAr ? 'كل الأنواع' : 'All Types';
     typeFilter.options[1].text = isAr ? 'الصور' : 'Images';
@@ -847,6 +874,8 @@ function applyLang() {
     sortSelect.options[1].text = isAr ? 'الأقدم' : 'Oldest';
     sortSelect.options[2].text = isAr ? 'الاسم تصاعدي' : 'Name A-Z';
     sortSelect.options[3].text = isAr ? 'الاسم تنازلي' : 'Name Z-A';
+
+    searchInput.placeholder = isAr ? 'ابحث عن شهادة...' : 'Search certificate...';
 }
 document.getElementById('langToggle').addEventListener('click', toggleLang);
 
@@ -949,7 +978,7 @@ function renderCertificates() {
 }
 
 function createCard(cert) {
-    const col = document.createElement('div'); col.className = 'col-12 col-md-6 col-xl-4';
+    const col = document.createElement('div'); col.className = 'col-12 col-sm-6 col-xl-4';
     const card = document.createElement('div'); card.className = 'certificate-card';
 
     const preview = document.createElement('div'); preview.className = 'certificate-preview';
@@ -1005,7 +1034,7 @@ function actionBtn(className, icon, text, cb) {
 }
 
 // ================================================================
-// ACTIONS (Preview, Edit, Delete, Download)
+// ACTIONS
 // ================================================================
 function openPreview(cert) {
     document.getElementById('previewTitle').textContent = cert.name;
@@ -1149,4 +1178,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 </script>
 </body>
-</html>
+                                                                                  </html>
